@@ -1,4 +1,4 @@
-@extends("layouts.layout")
+@extends("layouts.default")
 
 @section("title", "さあ、はじめよう")
 @section("content")
