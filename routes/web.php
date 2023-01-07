@@ -43,7 +43,9 @@ Route::get('/monty-hall', [GameController::class, "montyHall"]);
 
 Route::get('/form', [RequestSampleController::class, "form"]);
 Route::get('/query-strings', [RequestSampleController::class, "queryStrings"]);
-Route::get('/user/{id}', [RequestSampleController::class, "profile"]);
-
+Route::get('/user/{id}', [RequestSampleController::class, "profile"]) -> name("profile");
 Route::get('/products/{category}/{year}', [RequestSampleController::class, "productsArchive"]);
+Route::get('root-link', [RequestSampleController::class, "routeLink"]);
 
+Route::get('/login', [RequestSampleController::class, "loginForm"]);
+Route::post('/login', [RequestSampleController::class, "login"]) -> name("login");
